@@ -8,6 +8,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import ProjectDetail from './pages/ProjectDetail';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -39,6 +40,14 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
+            <Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/projects" element={<Projects />} />
+  <Route path="/projects/:id" element={<ProjectDetail />} />
+  <Route path="/contact" element={<Contact />} />
+  <Route path="*" element={<NotFound />} />
+</Routes>
           </Routes>
         </main>
         <Footer />
