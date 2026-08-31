@@ -47,7 +47,7 @@ export const projectsData = [
     category: 'web',
     featured: true,
     liveUrl: '#',
-    githubUrl: '#'
+    githubUrl: 'https://github.com/Sanjana-Deval/My-Portfolio.git'
   },
   {
     id: 5,
