@@ -1,0 +1,152 @@
+
+.project-detail {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 70px 20px 100px;
+}
+
+/* Back button */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #2e86ab;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 35px;
+  transition: transform 0.2s ease;
+}
+
+.back-link:hover {
+  transform: translateX(-4px);
+}
+
+/* Main card */
+
+.project-detail-content {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 28px;
+  padding: 55px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.07);
+}
+
+/* Heading */
+
+.project-label {
+  color: #2e86ab;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 0 0 12px;
+}
+
+.project-detail-header h1 {
+  font-size: 3.2rem;
+  line-height: 1.15;
+  margin: 0 0 20px;
+  color: #1f2937;
+}
+
+.project-description {
+  color: #606b78;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 780px;
+}
+
+/* Technologies */
+
+.project-tech {
+  margin-top: 45px;
+  padding-top: 35px;
+  border-top: 1px solid #eeeeee;
+}
+
+.project-tech h2 {
+  font-size: 1.35rem;
+  margin: 0 0 20px;
+  color: #222222;
+}
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.detail-tag {
+  background: #eef7fb;
+  color: #2e86ab;
+  padding: 9px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid #d7edf5;
+}
+
+/* Buttons */
+
+.project-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 45px;
+}
+
+.project-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.project-actions .btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Not found */
+
+.project-not-found {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.project-not-found h2 {
+  margin-bottom: 25px;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .project-detail {
+    padding: 45px 18px 70px;
+  }
+
+  .project-detail-content {
+    padding: 30px 22px;
+    border-radius: 20px;
+  }
+
+  .project-detail-header h1 {
+    font-size: 2.3rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .project-actions {
+    flex-direction: column;
+  }
+
+  .project-actions .btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
