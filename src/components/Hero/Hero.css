@@ -1,75 +1,191 @@
-/* STREAMING_CHUNK:Styling the main hero section... */
+
 .hero-section {
   margin-top: 0;
   text-align: center;
-  background: linear-gradient(135deg, var(--primary), #2E86AB);
-  color: var(--white);
-  padding: 100px 5% 80px;
-
-  /* Modern flexbox touches to center everything vertically */
+  background: #ffffff;
+  color: #222222;
+  padding: 110px 5% 100px;
   min-height: 60vh;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+
   position: relative;
-  z-index: 0;
+  overflow: hidden;
+}
+
+/* Background circles */
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: rgba(46, 134, 171, 0.08);
+  border-radius: 50%;
+  top: -120px;
+  right: -80px;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  background: rgba(46, 134, 171, 0.06);
+  border-radius: 50%;
+  bottom: -120px;
+  left: -70px;
 }
 
 .hero-content {
-max-width: 800px;
+  max-width: 850px;
+  position: relative;
+  z-index: 1;
 }
 
-/* STREAMING_CHUNK:Defining keyframe animations... /
-/ Animations */
-@keyframes fadeInUp {
-from { opacity: 0; transform: translateY(30px); }
-to { opacity: 1; transform: translateY(0); }
+/* Good Morning */
+
+.greeting {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2e86ab;
+  margin-bottom: 15px;
+
+  animation: fadeInUp 0.8s ease 0.1s both;
 }
 
-/* STREAMING_CHUNK:Applying animations to text elements... */
+/* Main heading */
+
 .hero-section h1 {
-font-size: 3.5rem;
-margin-bottom: 20px;
-animation: fadeInUp 0.8s ease 0.2s both;
-}
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 0 0 15px;
+  font-weight: 700;
+  color: #222222;
 
-@media (min-width: 900px) {
-  .hero-section h1 {
-    white-space: nowrap;
-  }
+  animation: fadeInUp 0.8s ease 0.2s both;
 }
 
 .highlight {
-color: var(--accent);
+  color: #2e86ab;
 }
+
+/* Student title */
+
+.hero-section h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #444444;
+  margin: 0 0 20px;
+
+  animation: fadeInUp 0.8s ease 0.3s both;
+}
+
+/* Description */
 
 .tagline {
-font-size: 1.25rem;
-margin-bottom: 40px;
-animation: fadeInUp 0.8s ease 0.4s both;
-color: rgba(255, 255, 255, 0.9);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto 40px;
+  color: #666666;
+
+  animation: fadeInUp 0.8s ease 0.4s both;
 }
 
-/* STREAMING_CHUNK:Applying animations to buttons and setting layout... */
+/* Buttons */
+
 .hero-buttons {
-display: flex;
-gap: 20px;
-justify-content: center;
-animation: fadeInUp 0.8s ease 0.6s both;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+
+  animation: fadeInUp 0.8s ease 0.6s both;
 }
 
-/* STREAMING_CHUNK:Adding responsive styles for mobile devices... /
-/ Responsive Adjustments for Mobile */
+.btn {
+  display: inline-block;
+  padding: 13px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* View My Work */
+
+.btn-primary {
+  background: #2e86ab;
+  color: #ffffff;
+  border: 2px solid #2e86ab;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(46, 134, 171, 0.25);
+}
+
+/* Contact Me */
+
+.btn-secondary {
+  background: transparent;
+  color: #2e86ab;
+  border: 2px solid #2e86ab;
+}
+
+.btn-secondary:hover {
+  background: #2e86ab;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* Animation */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+
 @media (max-width: 768px) {
-.hero-section h1 {
-font-size: 2.5rem;
-}
+  .hero-section {
+    padding: 80px 20px;
+    min-height: 65vh;
+  }
 
-.hero-buttons {
+  .hero-section h1 {
+    font-size: 2.7rem;
+  }
+
+  .hero-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
     flex-direction: column;
-    gap: 15px;
+    width: 100%;
+    max-width: 280px;
+    margin: auto;
+  }
+
+  .btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
-
-}
